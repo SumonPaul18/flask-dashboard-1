@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Authentication{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6 d-none d-md-block">
+        <img src="{{ url_for('static', filename='images/example.jpg') }}" class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="col-md-6">
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="mb-4">
+            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                <label class="btn btn-primary active" id="signin-tab">
+                    <input type="radio" name="options" autocomplete="off" checked> Sign In
+                </label>
+                <label class="btn btn-secondary" id="signup-tab">
+                    <input type="radio" name="options" autocomplete="off"> Sign Up
+                </label>
+            </div>
+            <div id="signin-form">
+                <form>
+                    <div class="form-group">
+                        <label for="signin-email">Email address</label>
+                        <input type="email" class="form-control" id="signin-email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" class="form-control" id="signin-password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    <a href="{{ url_for('google.login') }}" class="btn btn-outline-danger btn-block">Continue with Google</a>
+                </form>
+            </div>
+            <div id="signup-form" style="display: none;">
+                <form>
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" class="form-control" id="signup-name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email address</label>
+                        <input type="email" class="form-control" id="signup-email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" class="form-control" id="signup-password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    <a href="{{ url_for('google.login') }}" class="btn btn-outline-danger btn-block">Continue with Google</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('signin-tab').addEventListener('click', function() {
+        document.getElementById('signin-form').style.display = 'block';
+        document.getElementById('signup-form').style.display = 'none';
+        this.classList.add('btn-primary');
+        this.classList.remove('btn-secondary');
+        document.getElementById('signup-tab').classList.add('btn-secondary');
+        document.getElementById('signup-tab').classList.remove('btn-primary');
+    });
+
+    document.getElementById('signup-tab').addEventListener('click', function() {
+        document.getElementById('signin-form').style.display = 'none';
+        document.getElementById('signup-form').style.display = 'block';
+        this.classList.add('btn-primary');
+        this.classList.remove('btn-secondary');
+        document.getElementById('signin-tab').classList.add('btn-secondary');
+        document.getElementById('signin-tab').classList.remove('btn-primary');
+    });
+</script>
+{% endblock %}

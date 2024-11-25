@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Sign In{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/example.jpg') }}" class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="col-md-6">
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="mb-4">
+            <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                    <input type="radio" name="options" id="signin" autocomplete="off" checked> Sign In
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="signup" autocomplete="off"> Sign Up
+                </label>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                <a href="{{ url_for('google.login') }}" class="btn btn-outline-danger btn-block">Continue with Google</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
