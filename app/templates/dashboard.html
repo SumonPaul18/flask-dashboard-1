@@ -5,17 +5,20 @@
     <div class="col-md-3">
         <div class="sidebar">
             <div class="list-group">
-                <div class="list-group-item">
-                    <img src="{{ google_info.picture }}" alt="Profile Image" class="img-thumbnail">
-                    <h5>{{ google_info.name }}</h5>
-                    <p>{{ google_info.email }}</p>
+                <div class="list-group-item dropdown">
+                    <a href="#" class="dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="{{ google_info.picture }}" alt="Profile Image" class="img-thumbnail">
+                        <h5>{{ google_info.name }}</h5>
+                        <p>{{ google_info.email }}</p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Help</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ url_for('main.logout') }}">Logout</a>
+                    </div>
                 </div>
-                <a href="#" class="list-group-item list-group-item-action active">
-                    Dashboard
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">Profile</a>
-                <a href="#" class="list-group-item list-group-item-action">Settings</a>
-                <a href="#" class="list-group-item list-group-item-action">Help</a>
             </div>
         </div>
     </div>

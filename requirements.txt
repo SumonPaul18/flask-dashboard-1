@@ -1,3 +1,9 @@
 Flask
 Flask-Dance
 python-dotenv
+Flask-MySQLdb
+Flask-SQLAlchemy
+Flask-Bcrypt
+Flask-Login
+flask-migrate
+mysql-connector-python
