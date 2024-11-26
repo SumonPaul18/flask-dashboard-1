@@ -12,8 +12,8 @@ my_flask_app/
 │   │   ├── base.html
 │   │   ├── home.html
 │   │   ├── dashboard.html
-|   |   |-- auth.html
-|   |   |-- base_authenticated.html
+|   |   ├── auth.html
+|   |   ├── base_authenticated.html
 │   └── static/
 │       └── style.css
 │
