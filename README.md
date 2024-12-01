@@ -157,6 +157,7 @@ my_flask_app/
 
 #### Clone this Repository & Enter the directory
 ```
+rm -rf flask-dashboard-1
 git clone https://github.com/SumonPaul18/flask-dashboard-1.git
 cd flask-dashboard-1.git
 ```
@@ -199,8 +200,17 @@ cd flask-dashboard-1.git
      # Run app.py when the container launches
      CMD ["python", "run.py"]
      ```
+2. **Build and Run Your Docker Container**:
+   - Build your Docker image:
+     ```bash
+     docker-compose build
+     ```
+   - Run your Docker container:
+     ```bash
+     docker-compose up
+     ```
 
-2. **Create a `docker-compose.yml`**:
+3. **Create a `docker-compose.yml`**:
    - Use Docker Compose to manage multi-container applications.
    - Example `docker-compose.yml`:
      ```yaml
@@ -216,15 +226,6 @@ cd flask-dashboard-1.git
            - GOOGLE_OAUTH_CLIENT_SECRET=${GOOGLE_OAUTH_CLIENT_SECRET}
      ```
 
-3. **Build and Run Your Docker Container**:
-   - Build your Docker image:
-     ```bash
-     docker-compose build
-     ```
-   - Run your Docker container:
-     ```bash
-     docker-compose up
-     ```
 
 4. **Deploy to a Cloud Provider**:
    - Use a cloud provider like AWS, Google Cloud, or Azure to deploy your Docker container. Services like AWS Elastic Beanstalk, Google Cloud Run, or Azure App Service can simplify the deployment process.
