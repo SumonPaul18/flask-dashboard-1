@@ -175,7 +175,17 @@ cd flask-dashboard-1.git
 
 ### Docker Deployment
 
-1. **Create a `Dockerfile`**:
+1. **Build and Run Your Docker Container**:
+   - Build your Docker image:
+     ```bash
+     docker-compose build
+     ```
+   - Run your Docker container:
+     ```bash
+     docker-compose up
+     ```
+
+2. **Create a `Dockerfile`**:
    - Define your application's environment and dependencies in a `Dockerfile`.
    - Example `Dockerfile`:
      ```dockerfile
@@ -200,15 +210,7 @@ cd flask-dashboard-1.git
      # Run app.py when the container launches
      CMD ["python", "run.py"]
      ```
-2. **Build and Run Your Docker Container**:
-   - Build your Docker image:
-     ```bash
-     docker-compose build
-     ```
-   - Run your Docker container:
-     ```bash
-     docker-compose up
-     ```
+
 
 3. **Create a `docker-compose.yml`**:
    - Use Docker Compose to manage multi-container applications.
