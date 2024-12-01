@@ -159,7 +159,7 @@ my_flask_app/
 ```
 rm -rf flask-dashboard-1
 git clone https://github.com/SumonPaul18/flask-dashboard-1.git
-cd flask-dashboard-1.git
+cd flask-dashboard-1
 ```
 
 ### After entering the directory you changed `.env` file as your environment variable.
