@@ -178,11 +178,11 @@ cd flask-dashboard-1
 1. **Build and Run Your Docker Container**:
    - Build your Docker image:
      ```bash
-     docker-compose build
+     docker compose build
      ```
    - Run your Docker container:
      ```bash
-     docker-compose up
+     docker compose up -d
      ```
 
 2. **Create a `Dockerfile`**:
